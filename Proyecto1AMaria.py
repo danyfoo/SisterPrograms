@@ -115,7 +115,7 @@ f = 0   #Sumatoria de todos los datos
 
 #A continuacion ingresamos todos los datos de resistencia y temperatura (y,x) uno a uno a la ecuacion de la funcion
 #que realizara los minimos cuadrados
-for y,x,index in itertools.izip(resistencia,temperatura, range(1,len(resistencia)+1)):
+for x,y,index in itertools.izip(resistencia,temperatura, range(1,len(resistencia)+1)):
     aux = (y - (m*x) - b)**2 #Se van ingresando todos los datos
     f+=aux
     if index<10:
