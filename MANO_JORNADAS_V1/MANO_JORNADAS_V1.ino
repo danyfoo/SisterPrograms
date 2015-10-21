@@ -2,22 +2,22 @@
 
 Servo myServoA;
 Servo myServoB;
-//Servo myServoC;
-//Servo myServoD;
-//Servo myServoE;
+Servo myServoC;
+Servo myServoD;
+Servo myServoE;
 
-const int izqMaximo = 3;  //VAlor Maximo de lectura
-const int derMinimo = 1;    //VAlor Minimo de lectura
-const int pinLectura = A0;  //Pin de Lectura por Defecto Analogico para 
+const int izqMaximo = 500;  //VAlor Maximo de lectura
+const int derMinimo = 0;    //VAlor Minimo de lectura
+const int pinLectura = A1;  //Pin de Lectura por Defecto Analogico para 
 
 long signalReal, posicionRelativa;
 
 void setup() {
   myServoA.attach(5);
   myServoB.attach(6);
-  //myServoC.attach(9);
-  //myServoD.attach(10);
-  //myServoE.attach(11);
+  myServoC.attach(9);
+  myServoD.attach(10);
+  myServoE.attach(11);
     
   Serial.begin(9600);
 }
@@ -41,7 +41,7 @@ void moverServos(long posicionReal){
   
   myServoA.write(posicionRelativa);
   myServoB.write(posicionRelativa);
-  //myServoC.write(posicionRelativa);
-  //myServoD.write(posicionRelativa);
-  //myServoE.write(posicionRelativa);
+  myServoC.write(posicionRelativa);
+  myServoD.write(posicionRelativa);
+  myServoE.write(posicionRelativa);
 }
